@@ -10,9 +10,10 @@
   "options": {
     "properties": {
       "siteId": {
-        "title": "Shareaholic Site ID",
+        "title": "Shareaholic Site ID:",
         "type": "string",
-        "description": "Get this from Shareaholic.com (for example, d66d1e26c0f1f07ba8e3709578a8e11a)"
+        "description": "Enter the SIte ID provided to you in your <a href='https://shareaholic.com/publisher_tools' target='_blank'>Shareaholic Site Tools Dashboard</a>",
+        "placeholder": "for example: d66d1e26c0f1f07ba8e3709578a8e11a"
       }
     }
   }
