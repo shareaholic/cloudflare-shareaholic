@@ -3,17 +3,46 @@
     "head": [
       {
         "type": "script",
-        "src": "./eager-shareaholic.js"
+        "src": "./cloudflare-shareaholic.js"
       }
     ]
   },
+  "hooks": [
+    {
+      "events":["option-change:account", "preview", "before_new_install", "before_update_install"],
+      "endpoint": "https://shareaholic.com/integrations/cloudflare/hook",
+      "block": true,
+      "authenticate": ["account"]
+    }
+  ],
   "options": {
     "properties": {
+      "account": {
+        "title": "Shareaholic Account",
+        "type": "object",
+        "format": "account",
+        "services": ["shareaholic"],
+        "order": 0
+      },
       "siteId": {
         "title": "Shareaholic Site ID:",
         "type": "string",
-        "description": "Enter the Site ID provided to you in your <a href='https://shareaholic.com/publisher_tools' target='_blank'>Shareaholic Site Tools Dashboard</a>",
-        "placeholder": "for example: d66d1e26c0f1f07ba8e3709578a8e11a"
+        "description": "Enter the Site ID provided to you in your <a href='https://shareaholic.com/sites' target='_blank'>Shareaholic Sites Dashboard</a>",
+        "placeholder": "for example: d66d1e26c0f1f07ba8e3709578a8e11a",
+        "order": 1
+      },
+      "showShareCounter": {
+        "title": "Place a Share Counter on the site?",
+        "type": "boolean",
+        "order": 2
+      },
+      "shareCounter": {
+        "title": "Share Counter Location:",
+        "showIf": "showShareCounter",
+        "type": "object",
+        "format": "element",
+        "description": "Where should the Share Counter be placed on your site?",
+        "order": 3
       }
     }
   }
