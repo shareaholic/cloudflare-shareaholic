@@ -9,17 +9,8 @@
   }
   if (!options.siteId) { return; }
 
-  var counterEl;
-  var render = function(){
-    counterEl = Eager.createElement(options.shareCounter, counterEl);
-    if (options.showShareCounter){
-      counterEl.innerHTML = "<div class='shareaholic-canvas' data-app='total_share_count'></div>";
-    }
-  };
-
   var setOptions = function(opts){
     options = opts;
-    render();
   };
 
   var shr = document.createElement('script');
@@ -29,7 +20,6 @@
   shr.onload = shr.onreadystatechange = function() {
     var rs = this.readyState;
     if (rs && rs != 'complete' && rs != 'loaded') return;
-    render();
     try { Shareaholic.init(options.siteId); } catch (e) {}
   };
   var s = document.getElementsByTagName('script')[0];
@@ -37,5 +27,5 @@
 
   INSTALL_SCOPE = {
     setOptions: setOptions
-  }
+  };
 })();

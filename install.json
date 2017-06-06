@@ -9,7 +9,11 @@
   },
   "hooks": [
     {
-      "events":["option-change:account", "preview", "before_new_install", "before_update_install"],
+      "events":["option-change:account",
+                "option-change:siteId",
+                "preview",
+                "before_new_install",
+                "before_update_install"],
       "endpoint": "https://shareaholic.com/integrations/cloudflare/hook",
       "block": true,
       "authenticate": ["account"]
@@ -27,22 +31,9 @@
       "siteId": {
         "title": "Shareaholic Site ID:",
         "type": "string",
-        "description": "Enter the Site ID provided to you in your <a href='https://shareaholic.com/sites' target='_blank'>Shareaholic Sites Dashboard</a>",
+        "description": "Enter the Site ID provided to you in your <a href='https://shareaholic.com/sites' target='_blank'>Shareaholic Sites Dashboard</a>. If you already have Shareaholic account and this website configured, please log in and we will present list of your sites here. If not, please register and we will add your site for you during installation process.",
         "placeholder": "for example: d66d1e26c0f1f07ba8e3709578a8e11a",
         "order": 1
-      },
-      "showShareCounter": {
-        "title": "Place a Share Counter on the site?",
-        "type": "boolean",
-        "order": 2
-      },
-      "shareCounter": {
-        "title": "Share Counter Location:",
-        "showIf": "showShareCounter",
-        "type": "object",
-        "format": "element",
-        "description": "Where should the Share Counter be placed on your site?",
-        "order": 3
       }
     }
   }
