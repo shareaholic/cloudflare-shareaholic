@@ -36,6 +36,10 @@
         "description": "Enter the Site ID provided to you in your <a href='https://shareaholic.com/sites' target='_blank'>Shareaholic Sites Dashboard</a>. If you already have a Shareaholic account, please log in and we will present a list of your sites here for you to choose from. If not, please sign up and we will setup your site during the installation process.",
         "placeholder": "for example: d66d1e26c0f1f07ba8e3709578a8e11a",
         "order": 1
+      },
+      "setup": {
+        "type": "help",
+        "helpvalue": "Once you've linked your Cloudflare account with Shareaholic, head on over to your <a href='https://shareaholic.com/sites' target='_blank'>Shareaholic Sites Dashboard</a> to configure your settings."
       }
     }
   }
