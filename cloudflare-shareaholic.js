@@ -15,7 +15,7 @@
 
   var shr = document.createElement('script');
   shr.setAttribute('data-cfasync', 'false');
-  shr.src = '//dsms0mj1bbhn4.cloudfront.net/assets/pub/shareaholic.js';
+  shr.src = 'https://apps.shareaholic.com/assets/pub/shareaholic.js';
   shr.type = 'text/javascript'; shr.async = 'true';
   shr.onload = shr.onreadystatechange = function() {
     var rs = this.readyState;
